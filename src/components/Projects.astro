@@ -1,0 +1,55 @@
+---
+import Image from "astro/components/Image.astro"
+import ambiente23Image from '../../public/img/ambiente23.png'
+
+const PROYECTS = [
+    {
+        title: 'Ambiente23',
+        description: 'Diseñado e implementacion de la pagina web para la inmobiliaria Ambiente23',
+        img: ambiente23Image,
+        url: 'https://ambiente23.com.ar',
+        lenguage: ['HTML', 'CSS', 'JavaScript', 'TailwindCSS', 'PHP'],
+        code: true
+    },
+
+]
+---
+<section class="flex flex-col gap-5" id="proyectos">
+    <div class="flex items-center gap-5">
+            <svg  width="40"  height="40"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  
+            class="text-[#ff5252]">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M7 8l-4 4l4 4" /><path d="M17 8l4 4l-4 4" /><path d="M14 4l-4 16" />
+        </svg>
+        <h3 class="text-2xl font-bold  items-center">Proyectos
+        </h3>
+    </div>
+    <section>
+        <section class="flex flex-col gap-5">
+        {
+            PROYECTS.map((proyect, index) => (
+                <div class="flex flex-col md:flex-row gap-5 items-start md:items-center">
+                   <a class="overflow-hidden rounded-lg w-auto h-[250px]" href={proyect.url}>
+                        <Image src={proyect.img} alt={proyect.title}  class="object-cover object-center w-[450px] h-full hover:scale-125 transition-transform duration-500 ease-in-out" />
+                             
+                    </a>
+                    <div class="flex flex-col gap-2">
+                        <h4 class="text-xl font-bold">{proyect.title}</h4>
+                        <div class="max-w-xl flex flex-wrap gap-y-1">
+                        {
+                            proyect.lenguage.map(leng => (
+                                <span class="bg-[#ff5252]/35 text-gray-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded-full">{leng}</span>
+                            ))
+                        }
+                        </div>
+                        <p class="text-gray-500">{proyect.description}</p>
+                        <footer class="flex gap-3">
+                            <a href={proyect.url} class="text-[#ff5252] font-semibold p-2 border rounded-lg bg-[#ff5252]/50">Ver más</a>
+                             {proyect.code ? <a href={proyect.url} class="text-gray-400 font-light p-2 ">Ver código</a> : '' }
+                        </footer>
+                    </div>
+                </div>
+            ))
+        }
+        </section>
+    </section>
+</section>

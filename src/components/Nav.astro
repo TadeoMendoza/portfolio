@@ -1,0 +1,48 @@
+---
+---
+<div class="flex justify-start ml-8 md:ml-0 md:justify-center sticky top-5 z-[9999]">
+    <nav class="px-4 py-4 lg:px-16 text-[#191919] inline-block md:inset-0 rounded-lg md:rounded-full duration-300 ">
+        <button class="flex md:hidden items-center gap-2" id="showNavMenu">
+            <svg  width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-menu-2">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M4 6l16 0" />
+                <path d="M4 12l16 0" />
+                <path d="M4 18l16 0" />
+              </svg>
+              <span>Menú</span>
+        </button>
+        <div class="hidden flex mt-2 md:mt-0 md:gap-4 justify-center  [&>*]:text-lg [&>*]:font-light hover:[&>*]:text-[#ff5252] [&>*]:p-2 flex-col md:flex-row">
+            <a href="#inicio" class="">
+                Inicio
+            </a>
+            <a href="#experiencia" class="">
+                Experiencia
+            </a>
+            <a href="#proyectos" class="">
+                Proyectos
+            </a>
+            <a href="#contacto" class="">
+                Contacto
+            </a>
+        </div>
+    </nav>
+</div>
+
+<script>
+    window.addEventListener('scroll', () => {
+        const nav = document.querySelector('nav') as HTMLElement;
+        if (window.scrollY > 0) {
+            nav.classList.add('bg-[#191919]/40', 'backdrop-blur-xl', 'text-[#F9F6EE]');
+            nav.classList.remove('text-[#191919]');
+
+        } else {
+            nav.classList.remove('bg-[#191919]/40', 'backdrop-blur-xl', 'text-[#F9F6EE]');
+            nav.classList.add('text-[#191919]');
+        }
+    });
+    const navButton = document.getElementById('showNavMenu') as HTMLButtonElement;
+    const navMenu = document.querySelector('nav > div') as HTMLElement;
+    navButton.addEventListener('click', () => {
+        navMenu.classList.toggle('hidden');
+    });
+</script>

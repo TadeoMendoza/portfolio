@@ -1,0 +1,54 @@
+---
+const EXPERIENCE = [
+    {   
+        date: 'Actualmente',
+        title: 'Mapaprop',
+        description: 'Desarrollador full stack en Mapaprop, una empresa de software  SaaS para profesionales inmobiliarios. Trabajo en el desarrollo de nuevas funcionalidades y mantenimiento de la plataforma.',
+        lenguage: ['Vue3', 'Node.js', 'AWS', 'Java', 'HTML', 'Git', 'Nuxt3', 'Angular', 'CSS', 'SCSS', 'MYSQL', 'JavaScript', 'PHP', 'Bootstrap', 'TailwindCSS', 'PrimeVue', 'PrimeFlex']
+    },
+    {
+        date: 'Diciembre 2022 - Enero 2023',
+        title: 'Abbamat',
+        description: 'Desarrollador full stack en Abbamat, una pyme dedicada a los moldes para cristalería. Trabajé en el desarrollo de una aplicación web para la gestión de horarios y piezas de cada operario.',
+        lenguage: ['Python', 'Django', 'HTML', 'CSS', 'JavaScript', 'GitHub']
+        
+    },
+    {
+        date: 'Junio 2022 - octubre 2022',
+        title: 'Pasantia Abbamat',
+        description: 'Pasante full stack en Abbamat, una pyme dedicada a los moldes para cristalería.',
+        lenguage: ['Python', 'flask', 'CSS', 'JavaScript', 'GitHub']
+    },
+]
+---
+<section class="flex flex-col  gap-5 justify-center" id="experiencia">
+    <div class="flex items-center gap-5">
+        <svg    width="40"  height="40"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor" class="text-[#ff5252]" stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round" >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 7m0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v9a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z" />
+            <path d="M8 7v-2a2 2 0 0 1 2 -2h4a2 2 0 0 1 2 2v2" /><path d="M12 12l0 .01" /><path d="M3 13a20 20 0 0 0 18 0" />
+        </svg>
+        <h2 class="text-2xl font-bold ">Experiencia laboral
+        </h2>
+    </div>
+    <ol class="relative border-s border-gray-200">    
+        {
+            EXPERIENCE.map(experience => (
+            <li class="mb-10 ms-4">
+              <div class="absolute w-3 h-3 bg-[#ff5252] rounded-full mt-1.5 -start-1.5 border border-white"></div>
+                 <time class="mb-1 text-sm font-normal leading-none text-gray-400 ">{experience.date}</time>
+                 <h3 class="text-lg font-semibold text-gray-900 ">{experience.title}</h3>
+                 <p class="mb-4 text-base font-normal text-gray-500 ">{experience.description}</p>
+                 <div class="max-w-xl flex flex-wrap gap-2">
+                 {
+                    experience.lenguage.map(leng => (
+                        <span class="bg-[#ff5252]/35 text-gray-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded-full">{leng}</span>
+                    ))
+                 }
+                 </div>
+                 
+            </li>
+            ))
+
+        }           
+    </ol>    
+</section>
