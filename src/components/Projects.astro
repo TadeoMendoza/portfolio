@@ -1,16 +1,26 @@
 ---
 import Image from "astro/components/Image.astro"
 import ambiente23Image from '../../public/img/ambiente23.png'
+import shopTadeoMendoza from '../../public/img/shopTadeoMendoza.png'
+import { Code } from "astro:components"
 
 const PROYECTS = [
     {
         title: 'Ambiente23',
-        description: 'Diseñado e implementacion de la pagina web para la inmobiliaria Ambiente23',
+        description: 'Diseño e implementacion de la pagina web para la inmobiliaria Ambiente23',
         img: ambiente23Image,
         url: 'https://ambiente23.com.ar',
         lenguage: ['HTML', 'CSS', 'JavaScript', 'TailwindCSS', 'PHP'],
-        code: true
+        code: false
     },
+    {
+        title: 'Shop',
+        description: 'Sitio web diseñado para practicar SEO y mejorar el rendimiento de la web',
+        img: shopTadeoMendoza,
+        lenguage: ['HTML', 'CSS', 'JavaScript', 'TailwindCSS', 'Vue3', 'Nuxt3', 'PrimeVue', 'i18n'],
+        url: 'https://shop.tadeomendoza.com.ar',
+        code: false
+    }
 
 ]
 ---
