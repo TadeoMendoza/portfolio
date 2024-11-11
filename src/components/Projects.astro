@@ -1,65 +1,120 @@
 ---
 import Image from "astro/components/Image.astro"
 import ambiente23Image from '../../public/img/ambiente23.png'
+import bardiPropiedades from '../../public/img/bardiPropiedades.png'
+import jgnegociosinmobiliarios from '../../public/img/jgnegociosinmobiliarios.png'
+import paginaparcial from '../../public/img/paginaparcial.png'
+import memudoya from '../../public/img/memudoya.png'
+import pedidoagil from '../../public/img/pedidoagil.png'
+import adminpedidoagil from '../../public/img/adminpedidoagil.png'
 import shopTadeoMendoza from '../../public/img/shopTadeoMendoza.png'
 import { Code } from "astro:components"
 
 const PROYECTS = [
     {
-        title: 'Ambiente23',
-        description: 'Diseño e implementacion de la pagina web para la inmobiliaria Ambiente23',
+        title: 'Panel de Administraddor de PedidoAgil',
+        description: 'Panel de administrador de productos e informacion para PedidoAgil, desarrollado con VueJs, NuxtJs, TailwindCSS y AWS',  
+        img: adminpedidoagil,
+        url: 'https://admin.pedidoagil.com.ar',
+        lenguage: ['HTML', 'CSS', 'JavaScript', 'TailwindCSS', 'NuxtJs', 'VueJs', 'VueUse', 'AWS', 'Lambda', 'DynamoDB', 'S3'],
+        code: false
+    },
+    {
+        title: 'PedidoAgil - Sistema de Pedidos Online',
+        description: 'Plataforma para pedidos online mediante WhatsApp, desarrollada con VueJs, NuxtJs, TailwindCSS y AWS para una experiencia ágil y rápida.',
+        img: pedidoagil,
+        url: 'https://pedidoagil.com.ar',
+        lenguage: ['HTML', 'CSS', 'JavaScript', 'TailwindCSS', 'NuxtJs', 'VueJs', 'VueUse', 'AWS', 'Lambda', 'DynamoDB', 'S3'],
+        code: false
+    },
+    {
+        title: 'Memudoya.com - Portal Inmobiliario',
+        description: 'Diseño, desarrollo de funciones avanzadas y mantenimiento de un portal inmobiliario líder, optimizando la interfaz y experiencia de usuario con NuxtJs, VueJs y TailwindCSS.',
+        img: memudoya,
+        url: 'https://www.memudoya.com/',
+        lenguage: ['HTML', 'CSS', 'JavaScript', 'TailwindCSS', 'NuxtJs', 'VueJs', 'VueUse'],
+        code: false
+    },
+    {
+        title: 'JG Negocios Inmobiliarios - Website Profesional',
+        description: 'Creación de una web profesional para JG Negocios Inmobiliarios, con diseño en Figma y desarrollo con HTML, JavaScript, PHP y TailwindCSS.',
+        img: jgnegociosinmobiliarios,
+        url: 'https://www.jgnegociosinmobiliarios.com/',
+        lenguage: ['HTML', 'CSS', 'JavaScript', 'TailwindCSS', 'PHP'],
+        code: false
+    },
+    {
+        title: 'Bardi Negocios Inmobiliarios - Diseño Web',
+        description: 'Desarrollo de una web personalizada para Bardi Negocios Inmobiliarios con Figma, TailwindCSS y PHP para una presencia impactante.',
+        img: bardiPropiedades,
+        url: 'https://www.bardi-inmobiliaria.com.ar',
+        lenguage: ['HTML', 'CSS', 'JavaScript', 'TailwindCSS', 'PHP'],
+        code: false
+    },
+    {
+        title: 'Ambiente23 - Web para Inmobiliarias',
+        description: 'Diseño y desarrollo de la web para Ambiente23, combinando Figma con HTML, JavaScript y TailwindCSS para una interfaz moderna.',
         img: ambiente23Image,
         url: 'https://ambiente23.com.ar',
         lenguage: ['HTML', 'CSS', 'JavaScript', 'TailwindCSS', 'PHP'],
         code: false
     },
     {
-        title: 'Shop',
-        description: 'Sitio web diseñado para practicar SEO y mejorar el rendimiento de la web',
+        title: 'Evaluación de Desarrollo Web',
+        description: 'Sitio funcional para evaluación de curso de desarrollo web, creado con ASTRO 4, HTML y JavaScript, optimizado para rapidez.',
+        img: paginaparcial,
+        url: 'https://gestores-parcial.tadeomendoza.com.ar/',
+        lenguage: ['HTML', 'CSS', 'JavaScript', 'TailwindCSS', 'ASTRO 4'],
+        code: false
+    },
+    {
+        title: 'Shop - SEO y Rendimiento',
+        description: 'Tienda en línea para práctica de SEO y optimización, construida con Vue 3, Nuxt 3 y TailwindCSS para una experiencia rápida.',
         img: shopTadeoMendoza,
-        lenguage: ['HTML', 'CSS', 'JavaScript', 'TailwindCSS', 'Vue3', 'Nuxt3', 'PrimeVue', 'i18n'],
         url: 'https://shop.tadeomendoza.com.ar',
+        lenguage: ['HTML', 'CSS', 'JavaScript', 'TailwindCSS', 'VueJs', 'NuxtJs', 'PrimeVue', 'i18n'],
         code: false
     }
 
 ]
+
 ---
 <section class="flex flex-col gap-5" id="proyectos">
     <div class="flex items-center gap-2">
-            <svg  width="40"  height="40"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  
-            class="text-[#ff5252]">
-        <path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M7 8l-4 4l4 4" /><path d="M17 8l4 4l-4 4" /><path d="M14 4l-4 16" />
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-[#ff5252]">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+            <path d="M7 8l-4 4l4 4" />
+            <path d="M17 8l4 4l-4 4" />
+            <path d="M14 4l-4 16" />
         </svg>
-        <h3 class="text-2xl font-bold  items-center">Proyectos
-        </h3>
+        <h3 class="text-2xl font-bold items-center">Proyectos</h3>
     </div>
     <section>
         <section class="flex flex-col gap-5">
-        {
-            PROYECTS.map((proyect, index) => (
-                <div class="flex flex-col md:flex-row gap-5 items-start md:items-center">
-                   <a class="overflow-hidden rounded-lg w-auto h-[250px]" href={proyect.url}>
-                        <Image src={proyect.img} alt={proyect.title}  class="object-cover object-center w-[450px] h-full hover:scale-125 transition-transform duration-500 ease-in-out" />
-                             
-                    </a>
-                    <div class="flex flex-col gap-2">
-                        <h4 class="text-xl font-bold">{proyect.title}</h4>
-                        <div class="max-w-xl flex flex-wrap gap-y-1">
-                        {
-                            proyect.lenguage.map(leng => (
-                                <span class="bg-[#ff5252]/35 text-gray-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded-full">{leng}</span>
-                            ))
-                        }
+            {
+                PROYECTS.map((proyect, index) => (
+                    <div class="flex flex-col md:flex-row gap-5 items-start md:items-center">
+                        <a class="overflow-hidden rounded-lg w-full md:w-[450px] h-[250px] flex-shrink-0" href={proyect.url}>
+                            <Image src={proyect.img} alt={proyect.title} class="object-cover w-full h-full transition-transform duration-500 ease-in-out hover:scale-105" />
+                        </a>
+                        <div class="flex flex-col gap-2">
+                            <h4 class="text-xl font-bold">{proyect.title}</h4>
+                            <div class="max-w-xl flex flex-wrap gap-y-1">
+                                {
+                                    proyect.lenguage.map(leng => (
+                                        <span class="bg-[#ff5252]/35 text-gray-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded-full">{leng}</span>
+                                    ))
+                                }
+                            </div>
+                            <p class="text-gray-500">{proyect.description}</p>
+                            <footer class="flex gap-3">
+                                <a href={proyect.url} class="text-[#531b1b] font-semibold p-2 border rounded-lg bg-[#ff5252]/50">Ver más</a>
+                                {proyect.code ? <a href={proyect.url} class="text-gray-400 font-light p-2 ">Ver código</a> : '' }
+                            </footer>
                         </div>
-                        <p class="text-gray-500">{proyect.description}</p>
-                        <footer class="flex gap-3">
-                            <a href={proyect.url} class="text-[#ff5252] font-semibold p-2 border rounded-lg bg-[#ff5252]/50">Ver más</a>
-                             {proyect.code ? <a href={proyect.url} class="text-gray-400 font-light p-2 ">Ver código</a> : '' }
-                        </footer>
                     </div>
-                </div>
-            ))
-        }
+                ))
+            }
         </section>
     </section>
 </section>
